@@ -1,33 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-
 int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
-    
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-
    
-    //AQUI SERA ATRIBUIDO A LETRA QUE REPRESENTA CADA ESTADO
-    char A;
-    char B;
-    char C;
-    char D;
-    char E;
-    char F;
-    char G;
-    char H;
+   
+    
+    char estado; //AQUI SERA ATRIBUIDO A LETRA QUE REPRESENTA CADA ESTADO
 
     char codigo_da_cidade[4]; //AQUI SERA ATRIBUIDO O CODIGO QUE REPRESENTA CADA CIDADE
 
@@ -38,6 +16,10 @@ int main() {
     float area; //AQUI SERA ATRIBUIDO ÁREA DE CADA CIDADE
 
     float pib; //AQUI SERA INSERIDO O PIB DA CIDADE
+
+    float Densidade_Populacional; //População dividida pela área da cidade
+
+    float PIB_per_Capita; //PIB total dividido pela população
     
 
     //MENSAGEM DE BOAS VINDAS AO JOGAGOR
@@ -48,7 +30,7 @@ int main() {
     //REGARS DO JOGO
     printf("*********************************************************\n"); 
     printf("                REGRAS DO JOGO \n"); 
-    printf("*********************************************************\n"); 
+    printf("*********************************************************\n");
     printf("1. Cada país é dividido em 8 estados (A a H).\n"); 
     printf("2. Cada estado tem 4 cidades (1 a 4).\n"); 
     printf("3. O código da carta é a combinação da letra \n"); 
@@ -65,525 +47,818 @@ int main() {
     printf("*********************************************************\n\n\n");
 
 
+    //PRIMEIRO ESTADO A
+        printf("Insira o primeiro estado: ");
+        scanf(" %c", &estado);
 
-    printf("Insira o primeiro estado: ");
-    scanf(" %c", &A);
+    //PRIMEIRA CIDADE A1
+        printf("Insira a primeira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a primeira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a segunda cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+    //SEGUNDA CIDADE A2
+        printf("Insira a segunda cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a terceira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a quarta cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+    //TERCEIRA CIDADE A3
+        printf("Insira a terceira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+
+    //QUARTA CIDADE A4
+        printf("Insira a quarta cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
        
 
+    //SEGUNDO ESTADO B
+        printf("Insira o segundo estado: ");
+        scanf(" %c", &estado);
 
-    printf("Insira o segundo estado: ");
-    scanf(" %c", &B);
+    //PRIMEIRA CIDADE B1
+        printf("Insira a primeira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a primeira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a segunda cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+    //SEGUNDA CIDADE B2
+        printf("Insira a segunda cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a terceira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a quarta cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+    //TERCEIRA CIDADE B3
+        printf("Insira a terceira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira o terceiro estado: ");
-    scanf(" %c", &C);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira a primeira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira a segunda cidade: ");
-    scanf(" %s", &codigo_da_cidade);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+    //QUARTA CIDADE B4
+        printf("Insira a quarta cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira a terceira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira a quarta cidade: ");
-    scanf(" %s", &codigo_da_cidade);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+    //TERCEIRO ESTADO C
+        printf("Insira o terceiro estado: ");
+        scanf(" %c", &estado);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+    //PRIMEIRA CIDADE C1
+        printf("Insira a primeira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o quarto estado: ");
-    scanf(" %c", &D);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a primeira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+    //SEGUNDA CIDADE C2
+        printf("Insira a segunda cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a segunda cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a terceira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+    //TERCEIRA CIDADE C3
+        printf("Insira a terceira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a quarta cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        PIB_per_Capita = pib/populacao;
 
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
+    //QUARTA CIDADE C4
+        printf("Insira a quarta cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira o quinto estado: ");
-    scanf(" %c", &E);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a primeira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a segunda cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+    //QUARTO ESTADO D
+        printf("Insira o quarto estado: ");
+        scanf(" %c", &estado);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+    //PRIMEIRA CIDADE D1
+        printf("Insira a primeira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a terceira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a quarta cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+    //SEGUNDA CIDADE D2
+        printf("Insira a segunda cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira o sexto estado: ");
-    scanf(" %c", &F);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira a primeira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+    //TERCEIRA CIDADE D3
+        printf("Insira a terceira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a segunda cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a terceira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+    //QUARTA CIDADE D4
+        printf("Insira a quarta cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a quarta cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
+        PIB_per_Capita = pib/populacao;
 
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o setimo estado: ");
-    scanf(" %c", &G);
 
-    printf("Insira a primeira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+    //QUINTO ESTADO E
+        printf("Insira o quinto estado: ");
+        scanf(" %c", &estado);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+    //PRIMEIRA CIDADE E1
+        printf("Insira a primeira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira a segunda cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira a terceira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+    //SEGUNDA CIDADE E2
+        printf("Insira a segunda cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira a quarta cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+    //TERCEIRA CIDADE E3
+        printf("Insira a terceira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira o oitavo estado: ");
-    scanf(" %c", &H);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira a primeira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira a segunda cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+    //QUARTA CIDADE E4
+        printf("Insira a quarta cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
 
-    printf("Insira a terceira cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+        Densidade_Populacional =  populacao/area;
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        PIB_per_Capita = pib/populacao;
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
 
-    printf("Insira a quarta cidade: ");
-    scanf(" %s", &codigo_da_cidade);
+    //SEXTO ESTADO F
+        printf("Insira o sexto estado: ");
+        scanf(" %c", &estado);
 
-    printf("Insira a população da cidade: ");
-    scanf(" %d", &populacao);
+    //PRIMEIRA CIDADE F1
+        printf("Insira a primeira cidade: ");
+        scanf(" %s", codigo_da_cidade);
 
-    printf("Insira a área da cidade: ");
-    scanf(" %f", &area);
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
 
-    printf("Insira o PIB da cidade: ");
-    scanf(" %f", &pib);
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
 
-    printf("Insira o numero de pontos turisticos: ");
-    scanf(" %d", &pontos_turisticos);
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
 
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+    //SEGUNDA CIDADE F2
+        printf("Insira a segunda cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+    //TERCEIRA CIDADE F3
+        printf("Insira a terceira cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+    //QUARTA CIDADE F4
+        printf("Insira a quarta cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+    //SETIMO ESTADO G
+        printf("Insira o setimo estado: ");
+        scanf(" %c", &estado);
+
+    //PRIMEIRA CIDADE G1
+        printf("Insira a primeira cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+    //SEGUNDA CIDADE G2
+        printf("Insira a segunda cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+
+    //TERCEIRA CIDADE G3
+        printf("Insira a terceira cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+    //QUARTA CIDADE G4
+        printf("Insira a quarta cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+
+    //OITAVO ESTADO H
+        printf("Insira o oitavo estado: "); 
+        scanf(" %c", &estado);
+
+    //PRIMEIRA CIDADE H1
+        printf("Insira a primeira cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+    //SEGUNDO ESTADO H2
+        printf("Insira a segunda cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+    //TERCEIRO ESTADO H3
+        printf("Insira a terceira cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
+
+
+    //QUARTO ESTADO H4
+        printf("Insira a quarta cidade: ");
+        scanf(" %s", codigo_da_cidade);
+
+        printf("Insira a população da cidade: ");
+        scanf(" %d", &populacao);
+
+        printf("Insira a área da cidade: ");
+        scanf(" %f", &area);
+
+        printf("Insira o PIB da cidade: ");
+        scanf(" %f", &pib);
+
+        printf("Insira o numero de pontos turisticos: ");
+        scanf(" %d", &pontos_turisticos);
+
+        Densidade_Populacional =  populacao/area;
+
+        printf("Densidade Populacional: %.f\n", Densidade_Populacional);
+
+        PIB_per_Capita = pib/populacao;
+
+        printf("PIB per Capita: %.f\n", PIB_per_Capita);
 
 
     return 0;
